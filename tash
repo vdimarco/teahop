@@ -1,0 +1,54 @@
+[1mdiff --cc static/style.css[m
+[1mindex 224a0a8,0c9ed5c..0000000[m
+[1m--- a/static/style.css[m
+[1m+++ b/static/style.css[m
+[36m@@@ -58,7 -57,11 +58,15 @@@[m [mh3 [m
+    background-color: white!important;[m
+      box-shadow: #efefef 0px 0px 10px;[m
+      border: #cecece 1px dashed!important;[m
+[32m++<<<<<<< HEAD[m
+[32m +    margin-bottom: 10px;[m
+[32m++=======[m
+[32m+     border-radius: 15px;[m
+[32m+ [m
+[32m+     font-family: OpenSans;[m
+[32m+ font-size: 16px;[m
+[32m+ color: #FFFFFF;[m
+[32m++>>>>>>> a94e31de55e5910c6373748a98dfd3bc8160c4c4[m
+  [m
+  }[m
+  [m
+[1mdiff --cc templates/form.html[m
+[1mindex f3517bb,8315aee..0000000[m
+[1m--- a/templates/form.html[m
+[1m+++ b/templates/form.html[m
+[36m@@@ -89,13 -89,19 +89,29 @@@[m
+    <!-- <div class="grid-item grid-sizer"></div> -->[m
+    <!-- <div class="gutter-sizer"></div> -->[m
+  [m
+[32m++<<<<<<< HEAD[m
+[32m +  <div class="grid-item w1 h2 filter-button" id="chocolatey-filter" data-filter=".chocolatey" style="position: absolute; left: 0px; top: 0px;">chocolatey</div>[m
+[32m +  <div class="grid-item w1 h1 filter-button" data-filter=".fruity" style="position: absolute; left: 150px; top: 0px;">fruity</div>[m
+[32m +  <div class="grid-item w1 h3 filter-button" data-filter=".earthy" style="position: absolute; left: 300px; top: 0px;">earthy</div>[m
+[32m +  <div class="grid-item w1 h2 filter-button" data-filter=".sweet">sweet</div>[m
+[32m +  <div class="grid-item w1 h4 filter-button" data-filter=".savory">savory</div>[m
+[32m +  <div class="grid-item w1 h3 filter-button" data-filter=".creamy">creamy</div>[m
+[32m +  <div class="grid-item w1 h2 filter-button" data-filter=".floral">floral</div>[m
+[32m++=======[m
+[32m+   <!-- Grid items for empty divs -->[m
+[32m+   <!-- <div class="grid-item w1 h4 filter-button">choice1</div>[m
+[32m+   <div class="grid-item w1 h3 filter-button">choice2</div>[m
+[32m+   <div class="grid-item w1 h2 filter-button">choice3</div> -->[m
+[32m+   <div class="grid-item w1 h2 filter-button" style="background-color:#bb9479!important;" >chocolatey</div>[m
+[32m+   <div class="grid-item w1 h1 filter-button" style="background-color:#8fcd79!important;" >fruity</div>[m
+[32m+   <div class="grid-item w1 h3 filter-button" style="background-color:#608b4d!important;">earthy</div>[m
+[32m+   <div class="grid-item w1 h2 filter-button"  style="background-color:#ffc269!important;"   >sweet</div>[m
+[32m+   <div class="grid-item w1 h4 filter-button"style="background-color:#6a2a69!important;" >savory</div>[m
+[32m+   <div class="grid-item w1 h3 filter-button" style="background-color:#adacad!important;">creamy</div>[m
+[32m+   <div class="grid-item w1 h2 filter-button" style="background-color:#e4a7a8!important;">floral</div>[m
+[32m+   <div class="grid-item w1 h4 filter-button" style="background-color:#296ca9!important;">bitter</div>[m
+[32m+ [m
+[32m++>>>>>>> a94e31de55e5910c6373748a98dfd3bc8160c4c4[m
+  [m
+  [m
+  [m

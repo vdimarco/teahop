@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+
+  <title>Tea Hop | Discover the wonderful world of tea.</title>
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> -->
+  <!-- <script src="{{ url_for('static', filename='masonry.pkgd.min.js') }}"></script> -->
+  <script src="{{ url_for('static', filename='jquery.min.js') }}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.js
+"></script>
+<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicons/apple-touch-icon.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicons/favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicons/favicon-16x16.png') }}">
+<link rel="manifest" href="{{ url_for('static', filename='favicons/manifest.json') }}">
+<link rel="mask-icon" href="{{ url_for('static', filename='favicons/safari-pinned-tab.svg') }}" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+<!-- <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" > -->
+  <script src="{{ url_for('static', filename='isotope.pkgd.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='packery-mode.pkgd.min.js') }}"></script>
+  <!-- <script src = "https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style12.css') }}">
+  <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+  <!-- <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
+  <script>
+    window['_fs_debug'] = false;
+    window['_fs_host'] = 'fullstory.com';
+    window['_fs_org'] = '4JE98';
+    window['_fs_namespace'] = 'FS';
+    (function(m,n,e,t,l,o,g,y){
+        if (e in m && m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].'); return;}
+        g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+        o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+        y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+        g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+        g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+        g.clearUserCookie=function(c,d,i){if(!c || document.cookie.match('fs_uid=[`;`]*`[`;`]*`[`;`]*`')){
+        d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
+        ';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
+    })(window,document,window['_fs_namespace'],'script','user');
+</script>
+  <script src="https://unpkg.com/vue"></script>
+
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top hidden-nav" id="0">
+  <div class="container" >
+    <img class="all-categories" id="sticky-nav-logo" src="{{ url_for('static', filename='teahoplogo.png') }}" alt="tea hop logo" width="10%" style="padding:10px; float:left;"/>
+
+    <ul class="boxes" id="boxes">
+      <li>  <div class="box  "> </div></li>
+      <li>  <div class="box " > </div></li>
+      <li>  <div class="box " > </div></li>
+    </ul>
+
+    <!-- <button class="button is-checked" data-sort-by="original-order">original order</button> -->
+    <!-- <button id="all-categories" class="button" data-sort-by="name"> All Categories</button> -->
+    <!-- <button class="button shuffle-button"  data-sort-by="type" >random</button> -->
+    <button class="pull-right btn recommended-btn" id = "recommended">
+      <div class="ui basic modal">
+        <div class="ui card" style="width:100%!important;">
+          <div class="content" >
+            <div class="header recommendation-box">Your Recommendations</div>
+            <div class="description modal-text">
+              <hr>
+              <table>
+                <tr>
+                  <td>
+                    <i class="fa fa-coffee fa-5x" style="position:relative; left:170px; top:-60px;" aria-hidden="true"></i></td>
+                  <t><p class="name1" id="name1">Tea #1</p>
+                    <p class="type1" id="type1">Type: unknown</p>
+                    <p class="caffeine1" id="caffeine1">Caffeine: unknown</p>
+                    <p class="rating1" id="rating1">Rating:</p>
+                  </t>
+                </tr>
+
+
+              </table>
+              <hr>
+
+              <table>
+                <tr>
+                  <td>
+                    <i class="fa fa-coffee fa-5x" style="position:relative; left:170px; top:-60px;" aria-hidden="true"></i></td>
+                  <t><p class="name2" id="name2">Tea #2</p>
+                    <p class="type2" id="type2">Type: unknown</p>
+                    <p class="caffeine2" id="caffeine2">Caffeine: unknown</p>
+                    <p class="rating2" id="rating2"> </p>
+                  </t>
+                </tr>
+
+              </table>
+              <hr>
+            </div>
+          </div>
+      <div class="actions">
+        <div class="ui green ok inverted button">
+          <i class="checkmark icon"></i>
+          See more!
+        </div>
+      </div>
+    </div>
+      </div>Recommend!</button>
+    <i class="fa fa-random shuffle-button fa-5x" style="
+    font-size: 15px;
+    margin-top: 20px;" aria-hidden="true"></i>
+    <!-- <button class="button shuffle-button"  data-sort-by="type" >random</button> -->
+  </div>
+
+</nav>
+  <div class="ui segment" >
+    <div id="1">
+    <!-- <div id="stick_to_this" class="ui segment full-size"> -->
+    <div class="ui text" id="3">
+      <div class="ui banner" id="4">
+        <img id="all-categories" src="{{ url_for('static', filename='teahoplogo.png') }}" alt="tea hop logo" width="25%" style="padding:10px;"/>
+        <!-- <i class="fa fa-coffee fa-5x img-coffee" aria-hidden="true"></i> -->
+        <span class="ui hidden divider"><h3 class="shuffle-button">Tea you're going to love</h3></span>
+      </div>
+    </div>
+  <div>
+    <i class="fa fa-random shuffle-button fa-5x" aria-hidden="true" style="opacity:0;"></i>
+
+  </div>
+  </div>
+  <h1 style="text-align:center; ">Click Three Flavours</h1>
+  <div id="container" class="grid" style="margin-top:45px;">
+  <!-- <div class="grid-item grid-sizer"></div> -->
+  <!-- <div class="gutter-sizer"></div> -->
+  <div class="grid-item w1 h2 filter-button" style="background-color:#8fcd79!important; padding:20px;" id="flavortext"><img src="{{ url_for('static', filename='fruit.png') }}" alt="fruity icon" width="40%" style="display:block; margin:0 auto;" id="flavorico" /><h3 style="text-align:center;">fruity</h3></div>
+  <div class="grid-item w1 h3 filter-button" style="background-color:#608b4d!important; padding:20px;" id="flavortext"><img src="{{ url_for('static', filename='earthy.png') }}" alt="earthy icon" width="40%" style="display:block; margin:0 auto;" id="flavorico" /><h3 style="text-align:center;">earthy</h3></div>
+  <div class="grid-item w1 h2 filter-button" style="background-color:#ffc269!important; padding:20px;" id="flavortext"  ><img src="{{ url_for('static', filename='sweet.png') }}" alt="sweet icon" width="40%" style="display:block; margin:0 auto;" id="flavorico" /><h3 style="text-align:center;">sweet</h3></div>
+  <div class="grid-item w1 h3 filter-button" style="background-color:#6a2a69!important; padding:20px;" id="flavortext"><img src="{{ url_for('static', filename='savory.png') }}" alt="savory icon" width="40%" style="display:block; margin:0 auto;" id="flavorico" /><h3 style="text-align:center;">savory</h3></div>
+  <div class="grid-item w1 h3 filter-button" style="background-color:#adacad!important; padding:20px;" id="flavortext"><img src="{{ url_for('static', filename='cream.png') }}" alt="creamy icon" width="40%" style="display:block; margin:0 auto;" id="flavorico" /><h3 style="text-align:center;">creamy</h3></div>
+  <div class="grid-item w1 h2 filter-button" style="background-color:#e4a7a8!important; padding:20px;" id="flavortext"><img src="{{ url_for('static', filename='floral.png') }}" alt="floral icon" width="40%" style="display:block; margin:0 auto;" id="flavorico" /><h3 style="text-align:center;">floral</h3></div>
+  <div class="grid-item w1 h2 filter-button" style="background-color:#296ca9!important; padding:20px;" id="flavortext"><img src="{{ url_for('static', filename='bitter.png') }}" alt="bitter icon" width="40%" style="display:block; margin:0 auto;" id="flavorico" /><h3 style="text-align:center;">bitter</h3></div>
+  <div class="grid-item w1 h2 filter-button" style="background-color:#bb9479!important; padding:20px;" id="flavortext"> <img src="{{ url_for('static', filename='chocolatey.png') }}" alt="chocolately icon" width="35%" style="display:block; margin:0 auto;" id="flavorico" /><h3 style="text-align:center;">cacao</h3></div>
+
+  <div id="c_selections">
+    <div id="list_selections"></div>
+  </div>
+  <div id="c_flavours">
+  </div>
+</div>
+  </div>
+
+<script type="text/babel">
+
+$(document).ready(function() {
+
+        //     $("grid-item").click(function(){
+        //        $(".grid-item").effect( "highlight", {color:"#669966"} );
+        //        console.log('button pressed HIGHLIGHT');
+        //     });
+         });
+
+    //States
+    var selection = [];
+    var selectedClasses = [];
+    var recommendations = null;
+
+    var clusterNames = [
+        "floral",
+        "chocolatey",
+        "fruity",
+        "savory",
+        "sweet",
+        "earthy",
+        "creamy"];
+
+    var hClass = ["h1", "h2", "h3", "h4", "h5", "h6", "h7"]
+
+
+
+
+    console.log('!!!!!!!!!!!!!', selection)
+
+
+    $('.ui.basic.modal')
+        .modal('attach events', '#recommended', 'show');
+
+    $('.ui.sticky')
+        .sticky({
+            // context: '#stick_to_this'
+        });
+
+
+    $('.grid').isotope({
+        itemSelector: '.grid-item',
+        // columnWidth: 300,
+        filter: '.filter-button',
+        layoutMode: 'fitRows'
+//         masonry: {
+//         columnWidth: 50,
+//         gutter: 10
+// }
+        // packery: {
+        //   gutter: '.gutter-sizer'
+        //
+        // }
+    });
+
+    //Initiate isotope instance with plane Javascript
+    // var iso = new Isotope('.grid');
+
+    function changeFilter(flavour) {
+        console.log('!!!!!!!!!!', flavour)
+    }
+
+
+
+    $.ajax({
+        type: "GET",
+        url: '/list',
+        // data is the JSON object from teahop.com/list
+        success: function (data) {
+            // data.flavours refers to the arrays of flavors: data = {flavours[], ingredients[],teas[]}
+            var data_flavours = data.flavours;
+            // iterating through every single object in the data_flavours array
+            var listOfFlavours = [];
+            for(var i in data_flavours){
+                var flavour = data_flavours[i].label;
+                var flavourID = data_flavours[i].id;
+                //Generate random number to assign random class
+                var randomIndex = Math.floor(Math.random()*6);
+                var randomStyle = Math.floor(Math.random()*4);
+
+                var test = $(`
+               <div class="grid-item w1 ${hClass[randomStyle]} ${clusterNames[randomIndex]}"
+                  style="position: absolute; left: 396px; top: 0px;">
+                  //   <i class="fa fa-coffee" aria-hidden="true"></i>
+                      <a id=${flavourID} class="header">${flavour}</a>
+                 </div>`)
+
+                listOfFlavours.push(test[0])
+                // var $test2 = $ (`<div class="grid-item"> sdfsdfdf <div /> `)
+            }
+            $(".grid").append(listOfFlavours).isotope( 'appended', listOfFlavours)
+        }
+    });
+  var backgroundColor;
+    $('.grid').on( 'click', '.grid-item', function() {
+    console.log($(this).css("background-color"));
+        var className =  $(this).attr('class');
+        var divID = $(this).attr('id');
+        var text = $(this).text();
+
+        if ($(this).css("background-color") !== "rgb(255, 255, 255)"){
+                    backgroundColor = $(this).css("background-color");
+
+                } else {
+                    $(this).css("background-color", backgroundColor);
+                }
+
+        //If true it means that this is a filter button class
+        if(className.indexOf("filter-button")!== -1 ){
+
+            switch(text) {
+                case "chocolatey":
+                    $('.grid').isotope({ filter:'.chocolatey' });
+                    break;
+                case "floral":
+                    $('.grid').isotope({ filter:'.floral' });
+                    break;
+                case "fruity":
+                    $('.grid').isotope({ filter:'.fruity' });
+                    break;
+                case "savory":
+                    $('.grid').isotope({ filter:'.savory' });
+                    break;
+                case "sweet":
+                    $('.grid').isotope({ filter:'.sweet' });
+                    break;
+                case "earthy":
+                    $('.grid').isotope({ filter:'.earthy' });
+                    break;
+                case "creamy":
+                    $('.grid').isotope({ filter:'.creamy' });
+                    break;
+                case "bitter":
+                    $('.grid').isotope({ filter:'.bitter' });
+                    break;
+
+            }
+
+        } else {
+
+
+
+            //else post to the API and update the state
+
+            //Find the last class in this and pass it on
+
+            var lastClass = $(this).attr('class').split(' ').pop();
+
+            selectedClasses.unshift(lastClass)
+            updateState(selectedClasses)
+
+              //  $(this).append( "highlight", {color:"#669966"} );
+              //  console.log('button pressed HIGHLIGHT');
+              //  var tempVar = $(this);
+              //  console.log(tempVar);
+              //  tempVar.style.borderColor = "red";
+
+
+            var flavourID = $(this).find("a").attr('id');
+            if(selection.indexOf(flavourID) === -1) {
+                selection.push(flavourID);
+            }
+            console.log(',,,,,',JSON.stringify({'items':selection}));
+            $.ajax({
+                type: "POST",
+                url: '/recommendation',
+                data: JSON.stringify({'items':selection}),
+                contentType: 'application/json;charset=UTF-8',
+                //dataType: "json",
+                success: function (data) {
+                  console.log('?????',data);
+                  // var recommendationLabels = JSON.parse(data);
+                  // console.log('#####',recommendationLabels)
+                  console.log('#######',data.suggestions[0]);
+
+
+                  updateRecommendations(data.suggestions[0], data.suggestions[1]);
+                  updateRecommendations2(data.suggestions[0], data.suggestions[1]);
+                  updateRecommendations3(data.suggestions[0], data.suggestions[1]);
+                  updateRecommendations4(data.suggestions[0], data.suggestions[1]);
+
+
+                }
+            });
+            console.log('!!!!!!!!!!!!!!!!', selection)
+        } //End of else statement
+
+    });
+
+
+
+    function updateState(selection) {
+        console.log('!!!!!!!', selection)
+        var html =`
+ <ul class="boxes" id="boxes">
+      <li>  <div class="box  ${selection[0]}"> </div></li>
+      <li>  <div class="box ${selection[1]}" > </div></li>
+      <li>  <div class="box ${selection[2]}" > </div></li>
+    </ul>
+`
+      $('#boxes').replaceWith(html);
+
+
+    }
+
+    function updateModal(data) {
+
+
+    }
+
+
+
+    // bind filter button click
+    $('.all-categories').click(function() {
+
+        $('.grid').isotope({ filter: '.filter-button' });
+
+
+    });
+
+
+    //--------------------------Vue Stuff -----------------------//
+
+    //Top boxes
+    var boxes = new Vue({
+        el: '#boxes',
+        data: {
+            classes: [ 'chocolatey', 'floral', 'fruity']
+        }
+    })
+
+    var name1 = new Vue({
+        el: '#name1'
+
+    })
+    var name2 = new Vue({
+        el: '#name2'
+
+    })
+
+    function updateRecommendations(recommendation1, recommendation2) {
+      // TO DO : use .name and other properties of the object once backend is fixed
+        var html =`<p class="name1" id="name1">${recommendation1.label}</p>`
+        var html2= `<p class="name2" id="name2">${recommendation2.label}</p>`
+      $('#name1').replaceWith(html);
+      $('#name2').replaceWith(html2);
+
+    }
+
+    var type1 = new Vue({
+        el: '#type1'
+
+    })
+    var type2 = new Vue({
+        el: '#type2'
+
+    })
+
+    function updateRecommendations2(recommendation1, recommendation2) {
+      // TO DO : use .name and other properties of the object once backend is fixed
+        var html3 =`<p class="type1" id="type1">${recommendation1.tea_type}</p>`
+        var html4= `<p class="type2" id="type2">${recommendation2.tea_type}</p>`
+      $('#type1').replaceWith(html3);
+      $('#type2').replaceWith(html4);
+
+    }
+    var caffeine1 = new Vue({
+        el: '#caffeine1'
+
+    })
+    var caffeine2 = new Vue({
+        el: '#caffeine2'
+
+    })
+console.log(recommendation2.caffeine_level);
+    function updateRecommendations3(recommendation1, recommendation2) {
+      // TO DO : use .name and other properties of the object once backend is fixed
+        var html5 =`<p class="caffeine1" id="caffeine1">${recommendation1.caffeine_level}</p>`
+        var html6= `<p class="caffeine2" id="caffeine2">${recommendation2.caffeine_level}</p>`
+      $('#caffeine1').replaceWith(html5);
+      $('#caffeine2').replaceWith(html6);
+
+    }
+
+    var caffeine1 = new Vue({
+        el: '#ranking'
+
+    })
+    var caffeine2 = new Vue({
+        el: '#ranking'
+
+    })
+
+    function updateRecommendations4(recommendation1, recommendation2) {
+      // TO DO : use .name and other properties of the object once backend is fixed
+        var html7 =`<p class="ranking" id="ranking">${recommendation1.ranking}</p>`
+        var html8= `<p class="ranking" id="ranking">${recommendation2.ranking}</p>`
+      $('#ranking1').replaceWith(html7);
+      $('#ranking2').replaceWith(html8);
+
+    }
+
+</script>
+
+
+
+
+    <script>
+        $(document).ready(function(){
+//Sticky Header Logic
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop();
+                //>=, not <=
+                if (scroll >= 35 && $('.navbar').hasClass('sticky-nav') === false){
+                    $("#1").css("opacity",0);
+                    $( "#0" ).fadeIn( "slow" );
+                    $(".navbar").addClass(".sticky-nav");
+                } else {
+                  $("#1").css("opacity",1);
+                  $( "#0" ).fadeOut( "fast" );
+                  $(".sticky-nav").addClass(".navbar");
+                }
+            });
+
+            //Shuffle logic
+
+            $('.shuffle-button').click(function(){
+                console.log("button pressed");
+                $('.grid').isotope('shuffle');
+
+            });
+        })
+    </script>
+</body>
+
+</html>

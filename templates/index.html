@@ -1,0 +1,27 @@
+<select  name="ser" id="ser" class="form-control" onchange="getPrice();">
+<option value="">--Select--</option>
+<option value="Value11">Value1</option>
+<option value="Value2">Value2</option>
+</select>
+<select  name="freeitem" id="freeitem" class="form-control">
+</select>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script><!-- added jquery library-->
+
+<script type="text/javascript">
+function getPrice() {
+   data = {'items':[{'label':'flavour_chocolate', 'type':'flavour'}, {'label':'ingredient_black tea', 'type':'ingredient'}]}
+
+  $.ajax({
+    type: 'post',
+    url: 'http://localhost:5000/recommendation',
+    data: JSON.stringify(data),
+    dataType: 'json',
+    success: function(response) {
+        console.log(response)
+      $('#freeitem').html(response.rec_flavours);
+
+    }
+  });
+}
+
+</script>

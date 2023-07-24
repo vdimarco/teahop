@@ -1,0 +1,56 @@
+[452, 102, 23, 327]
+[('flavour_floral', 15.5792), ('flavour_honey', 10.3776), ('flavour_flowers', 6.8679), ('flavour_grass', 5.3923), ('flavour_nutty', 5.3777), ('flavour_butter', 4.9091), ('flavour_vegetal', 4
+.7783), ('flavour_peach', 3.7736), ('flavour_green', 2.843), ('flavour_astringent', 2.6786), ('flavour_jasmine', 2.57), ('flavour_roasted', 2.2406), ('flavour_hay', 2.0413), ('flavour_minera
+l', 1.5501), ('flavour_seaweed', 0.9204), ('flavour_toasty', 0.5608), ('flavour_toasted-rice', 0.5403), ('flavour_thick', 0.5315), ('flavour_rice', 0.5259), ('flavour_lychee', 0.5187)]
+[('ingredient_oolong-tea-leaves', 10.6415), ('ingredient_green-tea', 10.4305), ('ingredient_oolong-tea', 5.4659), ('ingredient_green-tea-leaves', 4.9932), ('ingredient_oolong', 1.3247), ('in
+gredient_yellow-tea-leaves', 1.2718), ('ingredient_sencha', 1.1253), ('ingredient_jasmine-flowers', 0.8772), ('ingredient_white-tea-leaves', 0.5734), ('ingredient_matcha-green-tea', 0.549),
+('ingredient_popped-rice', 0.2778), ('ingredient_flowers', 0.2115), ('ingredient_tea-twigs', 0.1911), ('ingredient_yabao', 0.1863), ('ingredient_ginseng', 0.12)]
+
+[274, 64, 39, 171]
+[('flavour_malt', 10.0274), ('flavour_chocolate', 8.6873), ('flavour_caramel', 5.3106), ('flavour_cocoa', 2.7633), ('flavour_coconut', 1.7372), ('flavour_plums', 1.6684), ('flavour_nuts', 1.
+288), ('flavour_almond', 1.1646), ('flavour_pineapple', 1.0945), ('flavour_molasses', 1.0418), ('flavour_hazelnut', 0.9785), ('flavour_baked-bread', 0.9174), ('flavour_brown-sugar', 0.7338),
+ ('flavour_pastries', 0.6426), ('flavour_tropical', 0.5904), ('flavour_raisins', 0.5061), ('flavour_dried-fruit', 0.3563), ('flavour_soap', 0.3216), ('flavour_dust', 0.2859), ('flavour_nutme
+g', 0.2678)]
+[('ingredient_black-tea-leaves', 4.1626), ('ingredient_artificial-flavouring', 1.6467), ('ingredient_almond', 1.0966), ('ingredient_papaya', 0.9253), ('ingredient_mango', 0.717), ('ingredien
+t_pineapple', 0.6957), ('ingredient_indian-black-tea', 0.6789), ('ingredient_rose-blossom-leaves', 0.5359), ('ingredient_roasted-almonds', 0.5006), ('ingredient_walnuts', 0.5006), ('ingredie
+nt_coconut', 0.4387), ('ingredient_pistacho', 0.3983), ('ingredient_safflower', 0.37), ('ingredient_marigold-petals', 0.328), ('ingredient_yunnan-black-tea', 0.2807), ('ingredient_marigold',
+ 0.2331), ('ingredient_hazelnut', 0.1698), ('ingredient_golden-raisins', 0.1295), ('ingredient_cacao', 0.1106), ('ingredient_hazelnut-natural-flavouring', 0.1084)]
+
+[273, 41, 88, 144]
+[('flavour_citrus', 5.1497), ('flavour_apple', 4.2595), ('flavour_rose', 3.0273), ('flavour_orange', 2.6289), ('flavour_tart', 2.4336), ('flavour_berries', 1.75), ('flavour_hibiscus', 1.6166
+), ('flavour_orange-zest', 1.4458), ('flavour_strawberry', 1.3403), ('flavour_mango', 1.3316), ('flavour_sour', 1.2195), ('flavour_raspberry', 0.995), ('flavour_blueberry', 0.7948), ('flavou
+r_tangy', 0.7867), ('flavour_candy', 0.7864), ('flavour_lime', 0.7248), ('flavour_herbaceous', 0.6569), ('flavour_berry', 0.6359), ('flavour_banana', 0.6174), ('flavour_artificial', 0.5559)]
+
+[('ingredient_natural-flavours', 11.0778), ('ingredient_chinese-black-tea', 3.5112), ('ingredient_apple', 3.3326), ('ingredient_apple-pieces', 2.8981), ('ingredient_rose-hips', 1.8941), ('in
+gredient_white-tea', 1.7981), ('ingredient_rose-petals', 1.6365), ('ingredient_blackberry-leaves', 1.5316), ('ingredient_hibiscus', 1.2675), ('ingredient_ceylon-black-tea', 1.0583), ('ingred
+ient_beet-root', 0.9825), ('ingredient_organic-rooibos', 0.9655), ('ingredient_natural-and-artificial-flavouring', 0.9499), ('ingredient_orange-peels', 0.9385), ('ingredient_hibiscus-flowers
+', 0.7233), ('ingredient_roasted-chicory-root', 0.7002), ('ingredient_rose', 0.5351), ('ingredient_pineapple-piece', 0.4985), ('ingredient_orange', 0.4602), ('ingredient_rose-buds', 0.4453)]
+
+
+[309, 31, 100, 178]
+[('flavour_cinnamon', 11.5587), ('flavour_spices', 6.3996), ('flavour_mint', 4.3184), ('flavour_lemon', 3.7081), ('flavour_ginger', 2.8071), ('flavour_spicy', 2.33), ('flavour_rooibos', 1.88
+88), ('flavour_herbs', 1.4995), ('flavour_lemongrass', 1.3154), ('flavour_licorice', 1.2053), ('flavour_spearmint', 1.1582), ('flavour_lemon-zest', 1.157), ('flavour_peppermint', 1.0203), ('
+flavour_cardamon', 0.9907), ('flavour_cloves', 0.9114), ('flavour_clove', 0.8292), ('flavour_peppercorn', 0.8197), ('flavour_pepper', 0.8101), ('flavour_anise', 0.6308), ('flavour_red-wine',
+ 0.3474)]
+[('ingredient_cinnamon', 4.2803), ('ingredient_ginger', 4.0793), ('ingredient_rooibos', 3.2421), ('ingredient_cardamom', 2.2422), ('ingredient_peppermint', 2.1825), ('ingredient_spearmint',
+1.4859), ('ingredient_licorice-root', 1.4182), ('ingredient_flavor', 1.3727), ('ingredient_orange-peel', 1.2566), ('ingredient_lemongrass', 1.1137), ('ingredient_cloves', 0.8324), ('ingredie
+nt_black-teas', 0.7241), ('ingredient_organic-cinnamon', 0.576), ('ingredient_lemon-peel', 0.5745), ('ingredient_lemon-verbena', 0.5584), ('ingredient_chamomile', 0.4557), ('ingredient_mint'
+, 0.4211), ('ingredient_flower-petals', 0.39), ('ingredient_clove', 0.3861), ('ingredient_star-anise-bits', 0.3342)]
+
+[300, 52, 18, 230]
+[('flavour_sweet', 39.9038), ('flavour_fruity', 12.2248), ('flavour_earth', 7.6586), ('flavour_wood', 6.6885), ('flavour_bitter', 6.5464), ('flavour_smoke', 4.8699), ('flavour_stonefruits',
+1.7216), ('flavour_apricot', 1.7053), ('flavour_autumn-leaf-pile', 0.8255), ('flavour_musty', 0.6976), ('flavour_tobacco', 0.6956), ('flavour_dirt', 0.561), ('flavour_leather', 0.5033), ('fl
+avour_wet-wood', 0.479), ('flavour_sugarcane', 0.4725), ('flavour_dark-bittersweet', 0.4319), ('flavour_wet-earth', 0.3969), ('flavour_white-grapes', 0.3677), ('flavour_campfire', 0.3112), (
+'flavour_muscatel', 0.2789)]
+[('ingredient_pu-erh-tea', 12.8235), ('ingredient_darjeeling-tea', 2.2052), ('ingredient_pu-erh-tea-leaves', 0.2211), ('ingredient_organic-jasmine-green-tea', 0.177), ('ingredient_rooibos-le
+aves', 0.1181), ('ingredient_cocoa', 0.1119)]
+
+[244, 34, 57, 153]
+[('flavour_vanilla', 11.2101), ('flavour_cream', 8.0419), ('flavour_smooth', 6.9379), ('flavour_creamy', 6.5155), ('flavour_tea', 1.7789), ('flavour_bergamot', 1.7213), ('flavour_cherry', 1.
+1779), ('flavour_black-currant', 0.6649), ('flavour_perfume', 0.4133), ('flavour_dark-chocolate', 0.349), ('flavour_chicken-soup', 0.3066), ('flavour_tannic', 0.2427), ('flavour_maple-syrup'
+, 0.2287), ('flavour_earl-grey', 0.2284), ('flavour_lavender', 0.1911), ('flavour_red-fruits', 0.1594)]
+[('ingredient_black-tea', 17.8499), ('ingredient_flavouring', 2.3976), ('ingredient_vanilla', 1.2582), ('ingredient_bergamot', 1.2281), ('ingredient_cornflower-petals', 1.0875), ('ingredient
+_yunnan-dian-hong', 0.9602), ('ingredient_vanilla-bean', 0.7736), ('ingredient_chocolate-bits', 0.6244), ('ingredient_bergamot-oil', 0.3339), ('ingredient_vanilla-flavour', 0.3198), ('ingred
+ient_cream-flavoring', 0.3018), ('ingredient_natural-caramel-flavor', 0.2778), ('ingredient_cocoa-beans', 0.2517), ('ingredient_cocoa-husks', 0.2517), ('ingredient_white-chocolate-bits', 0.2
+517), ('ingredient_organic-black-tea', 0.2467), ('ingredient_blue-cornflowers', 0.2337), ('ingredient_lavender-flowers', 0.2131), ('ingredient_chocolate', 0.1981), ('ingredient_marshmallow-r
+oot', 0.1869)]

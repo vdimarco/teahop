@@ -1,0 +1,24 @@
+[452, 102, 23, 327]
+[('flavour_floral', 15.5792), ('flavour_honey', 10.3776), ('flavour_flowers', 6.8679), ('flavour_grass', 5.3923), ('flavour_nutty', 5.3777)]
+[('ingredient_oolong-tea-leaves', 10.6415), ('ingredient_green-tea', 10.4305), ('ingredient_oolong-tea', 5.4659), ('ingredient_green-tea-leaves', 4.9932), ('ingredient_oolong', 1.3247)]
+
+[274, 64, 39, 171]
+[('flavour_malt', 10.0274), ('flavour_chocolate', 8.6873), ('flavour_caramel', 5.3106), ('flavour_cocoa', 2.7633), ('flavour_coconut', 1.7372)]
+[('ingredient_black-tea-leaves', 4.1626), ('ingredient_artificial-flavouring', 1.6467), ('ingredient_almond', 1.0966), ('ingredient_papaya', 0.9253), ('ingredient_mango', 0.717)]
+
+[273, 41, 88, 144]
+[('flavour_citrus', 5.1497), ('flavour_apple', 4.2595), ('flavour_rose', 3.0273), ('flavour_orange', 2.6289), ('flavour_tart', 2.4336)]
+[('ingredient_natural-flavours', 11.0778), ('ingredient_chinese-black-tea', 3.5112), ('ingredient_apple', 3.3326), ('ingredient_apple-pieces', 2.8981), ('ingredient_rose-hips', 1.8941)]
+
+[309, 31, 100, 178]
+[('flavour_cinnamon', 11.5587), ('flavour_spices', 6.3996), ('flavour_mint', 4.3184), ('flavour_lemon', 3.7081), ('flavour_ginger', 2.8071)]
+[('ingredient_cinnamon', 4.2803), ('ingredient_ginger', 4.0793), ('ingredient_rooibos', 3.2421), ('ingredient_cardamom', 2.2422), ('ingredient_peppermint', 2.1825)]
+
+[300, 52, 18, 230]
+[('flavour_sweet', 39.9038), ('flavour_fruity', 12.2248), ('flavour_earth', 7.6586), ('flavour_wood', 6.6885), ('flavour_bitter', 6.5464)]
+[('ingredient_pu-erh-tea', 12.8235), ('ingredient_darjeeling-tea', 2.2052), ('ingredient_pu-erh-tea-leaves', 0.2211), ('ingredient_organic-jasmine-green-tea', 0.177), ('ingredient_rooibos-le
+aves', 0.1181)]
+
+[244, 34, 57, 153]
+[('flavour_vanilla', 11.2101), ('flavour_cream', 8.0419), ('flavour_smooth', 6.9379), ('flavour_creamy', 6.5155), ('flavour_tea', 1.7789)]
+[('ingredient_black-tea', 17.8499), ('ingredient_flavouring', 2.3976), ('ingredient_vanilla', 1.2582), ('ingredient_bergamot', 1.2281), ('ingredient_cornflower-petals', 1.0875)]
