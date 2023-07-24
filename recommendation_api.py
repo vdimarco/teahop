@@ -10,7 +10,7 @@ import os
 
 app = Flask(__name__)
 
-G = nx.read_gpickle('data/graph.pickle')
+G = nx.read_gpickle('data/graph_empty.p')
 
 df = pd.read_csv('data/teahop_nodes_clean.csv')
 print (df.columns)
