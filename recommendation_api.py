@@ -39,7 +39,7 @@ def get_items():
     ingredients = [{'label':i, 'id':'ingredient_'+str(i).lower().replace(' ','-')} for i in ingredients]
     teas = [{'label':t, 'id':'tea_'+str(t).lower().replace(' ','-')} for t in teas]
 
-    return jsonify({'teas': sorted(teas), 'flavours': sorted(flavours), 'ingredients': sorted(ingredients)})
+    return jsonify({'teas': teas, 'flavours': flavours, 'ingredients': ingredients})
 
 @app.route(
     '/',
