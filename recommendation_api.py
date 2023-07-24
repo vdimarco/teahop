@@ -30,29 +30,16 @@ def get_items():
 
     load_teas = []
 
-    # df['flavours'] = df['flavours'].apply(lambda x: [y.strip() for y in str(x).split(',') if str(y).find('last update') == -1] if x != 'Not available' else [])
-    # df['ingredients'] = df['ingredients'].apply(lambda x: [y.strip() for y in str(x).split(',') if str(y).find('last update') == -1] if x != 'Not available' else [])
-    # flavours = list(set(list(itertools.chain(*df['flavours']))))
-    # ingredients = list(set(list(itertools.chain(*df['ingredients']))))
-    # teas = df[df['name'] != 'Not available']['name'].tolist()
-    # flavours = [{'label':f, 'id':'flavour_'+str(f).lower().replace(' ','-')} for f in flavours]
-    # ingredients = [{'label':i, 'id':'ingredient_'+str(i).lower().replace(' ','-')} for i in ingredients]
-    # teas = [{'label':t, 'id':'tea_'+str(t).lower().replace(' ','-')} for t in teas]
-    
-    for k, v in df.iterrows():
-
-        if v['flavours'] != 'Not available':
-            load_flavours.append([x.strip() for x in str(v['flavours']).split(',') if str(x).find('last update') == -1])
-
-        if v['ingredients'] != 'Not available' and str(v['ingredients']).find('last update') == -1:
-            load_ingredients.append([x.strip() for x in str(v['ingredients']).split(',') if str(x).find('last update') == -1])
-
-        if v['name'] != 'Not available':
-            load_teas.append(v['name'])
-            
+    df['flavours'] = df['flavours'].apply(lambda x: [y.strip() for y in str(x).split(',') if str(y).find('last update') == -1] if x != 'Not available' else [])
+    df['ingredients'] = df['ingredients'].apply(lambda x: [y.strip() for y in str(x).split(',') if str(y).find('last update') == -1] if x != 'Not available' else [])
+    flavours = list(set(list(itertools.chain(*df['flavours']))))
+    ingredients = list(set(list(itertools.chain(*df['ingredients']))))
+    teas = df[df['name'] != 'Not available']['name'].tolist()
     flavours = [{'label':f, 'id':'flavour_'+str(f).lower().replace(' ','-')} for f in flavours]
     ingredients = [{'label':i, 'id':'ingredient_'+str(i).lower().replace(' ','-')} for i in ingredients]
     teas = [{'label':t, 'id':'tea_'+str(t).lower().replace(' ','-')} for t in teas]
+
+    print (flavours)
 
     return jsonify({'teas': teas, 'flavours': flavours, 'ingredients': ingredients})
 
