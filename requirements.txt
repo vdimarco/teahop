@@ -1,9 +1,11 @@
 gunicorn==19.4.5
 # Flask==0.8
-Flask
+Flask==2.2.2
 # Jinja2==2.6
-Jinja2
-numpy==1.11.2
+Jinja2=3.1.2
+# numpy==1.11.2
+numpy==1.24.3
 # pandas==0.18.1
-pandas
-networkx==1.11
+pandas==1.5.3
+# networkx==1.11
+networkx==2.8.4
