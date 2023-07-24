@@ -10,15 +10,15 @@ import os
 
 app = Flask(__name__)
 
-G = nx.read_gpickle('data/graph.p')
+G = nx.read_gpickle('data/graph.pickle')
 
 df = pd.read_csv('data/teahop_nodes_clean.csv')
-print df.columns
-print len(df)
+print (df.columns)
+print (len(df))
 df = df[df['flavours'] != 'Not available'].copy()
-print len(df)
+print (len(df))
 df = df[df['rating'] > 0].copy()
-print len(df)
+print (len(df))
 
 @app.route('/list', methods=['GET'])
 def get_items():
@@ -74,12 +74,12 @@ def get_recommendations():
     # dic_ingredients = []
 
 
-    print dict(request.json)
+    print (dict(request.json))
     selection = dict(request.json)['items']
     selected_nodes = [x for x in dict(request.json)['items']]
     #selection = {'items':[{'label':'flavour_chocolate', 'type':'flavour'}, {'label':'ingredient_black tea', 'type':'ingredient'}]}
     #selected_nodes = [x['label'] for x in selection['items']]
-    print selected_nodes
+    print (selected_nodes)
 
     for k, v in df.iterrows():
         name = 'tea_' + str(v['name'].lower().replace(' ', '-'))
@@ -126,7 +126,7 @@ def get_recommendations():
         'ranking':round(v,6)}
         for k, v in top_candidates]})
 
-    print top_candidates
+    print (top_candidates)
 
 # TODO: add  to `/recommendations`
 
