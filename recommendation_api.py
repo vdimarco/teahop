@@ -7,6 +7,8 @@ import collections
 import operator
 import networkx as nx
 import os
+import string
+
 
 app = Flask(__name__)
 
@@ -32,14 +34,16 @@ def get_items():
 
     df['flavours'] = df['flavours'].apply(lambda x: [y.strip() for y in str(x).split(',') if str(y).find('last update') == -1] if x != 'Not available' else [])
     df['ingredients'] = df['ingredients'].apply(lambda x: [y.strip() for y in str(x).split(',') if str(y).find('last update') == -1] if x != 'Not available' else [])
+    
     flavours = list(set(list(itertools.chain(*df['flavours']))))
     ingredients = list(set(list(itertools.chain(*df['ingredients']))))
     teas = df[df['name'] != 'Not available']['name'].tolist()
-    flavours = [{'label':f, 'id':'flavour_'+str(f).lower().replace(' ','-')} for f in flavours]
-    ingredients = [{'label':i, 'id':'ingredient_'+str(i).lower().replace(' ','-')} for i in ingredients]
-    teas = [{'label':t, 'id':'tea_'+str(t).lower().replace(' ','-')} for t in teas]
 
-    print (flavours)
+    flavours = [{'label':f, 'id':'flavour_'+str(f).lower().translate(str.maketrans('', '', string.punctuation)).replace(' ','-')} for f in flavours]
+    ingredients = [{'label':i, 'id':'ingredient_'+str(i).lower().translate(str.maketrans('', '', string.punctuation)).replace(' ','-')} for i in ingredients]
+    teas = [{'label':t, 'id':'tea_'+str(t).lower().translate(str.maketrans('', '', string.punctuation)).replace(' ','-')} for t in teas]
+
+    # print (flavours)
 
     return jsonify({'teas': teas, 'flavours': flavours, 'ingredients': ingredients})
 
@@ -102,9 +106,9 @@ def get_recommendations():
             for n2 in G.neighbors(n1):
                 if n2 not in selected_nodes and candidates[n1] > (min_threshold*len(selected_nodes)):
                     candidates[n2] += candidates[n1]*((G[n1][n2]['weight']/max_weight)/len(G.neighbors(n1)))*decay
-                for n3 in G.neighbors(n2):
-                    if n3 not in selected_nodes and candidates[n2] > (min_threshold*len(selected_nodes)):
-                        candidates[n3] += candidates[n2]*((G[n2][n3]['weight']/max_weight)/len(G.neighbors(n2)))*decay
+                    for n3 in G.neighbors(n2):
+                        if n3 not in selected_nodes and candidates[n2] > (min_threshold*len(selected_nodes)):
+                            candidates[n3] += candidates[n2]*((G[n2][n3]['weight']/max_weight)/len(G.neighbors(n2)))*decay
     for sn in selected_nodes:
         del candidates[sn]
 
