@@ -39,9 +39,9 @@ def get_items():
     ingredients = list(set(list(itertools.chain(*df['ingredients']))))
     teas = df[df['name'] != 'Not available']['name'].tolist()
 
-    flavours = [{'label':f, 'id':'flavour_'+str(f).lower().translate(str.maketrans('', '', string.punctuation)).replace(' ','-')} for f in flavours]
-    ingredients = [{'label':i, 'id':'ingredient_'+str(i).lower().translate(str.maketrans('', '', string.punctuation)).replace(' ','-')} for i in ingredients]
-    teas = [{'label':t, 'id':'tea_'+str(t).lower().translate(str.maketrans('', '', string.punctuation)).replace(' ','-')} for t in teas]
+    flavours = [{'label':f, 'id':'flavour_'+str(f).lower().translate(str.maketrans('', '', string.punctuation))} for f in flavours]
+    ingredients = [{'label':i, 'id':'ingredient_'+str(i).lower().translate(str.maketrans('', '', string.punctuation))} for i in ingredients]
+    teas = [{'label':t, 'id':'tea_'+str(t).lower().translate(str.maketrans('', '', string.punctuation))} for t in teas]
 
     # print (flavours)
 
